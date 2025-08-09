@@ -12,4 +12,5 @@ class Exercise(models.Model):
     name = models.CharField(max_length=255)
     weight = models.IntegerField()
     reps = models.IntegerField()
-    workout = models.ForeignKey(Workout, on_delete=models.CASCADE)
+    workout = models.ForeignKey(Workout, on_delete=models.CASCADE,
+                                related_name='exercises')
